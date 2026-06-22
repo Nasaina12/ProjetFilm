@@ -1,21 +1,22 @@
+
 package com.example.Films;
 
-public class Compte {
-        private int id;
+import java.util.Date;
+
+public class Compte 
+{
+
+    private int id;
     private String mail;
-    private TypeAbonnement typeAbonnement;
+    private Abonnement abonnement;
     private Date dateCreation;
 
-    public Utilisateur(int id, String mail, TypeAbonnement typeAbonnement, Date dateCreation)
+    public Compte(int id,String mail,Abonnement abonnement,Date dateCreation) 
     {
+
         this.id = id;
         this.mail = mail;
-        this.typeAbonnement = typeAbonnement;
+        this.abonnement = abonnement;
         this.dateCreation = dateCreation;
-    }
-
-    public TypeAbonnement getType()
-    {
-        return type;
     }
 }

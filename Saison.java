@@ -1,9 +1,10 @@
-public class Saison
-{
+package com.example.Films;
+
+public class Saison {
+
     private int numero;
 
-    public Saison(int numero)
-    {
+    public Saison(int numero) {
         this.numero = numero;
     }
 }

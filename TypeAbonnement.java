@@ -1,4 +1,4 @@
-public class TypeAbonnement
+public enum TypeAbonnement
 {
     BASIQUE,
     MEDIUM,

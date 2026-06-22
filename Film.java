@@ -2,7 +2,8 @@ package com.example.Films;
 
 import java.time.LocalDate;
 
-public class Film {
+public class Film 
+{
     private int id;
     private String titre;
     private TypeFilm type;
@@ -10,8 +11,8 @@ public class Film {
     private String qualiteVideo;
     private int duree;
 
-    public Film(int id,int id,String titre,TypeFilm type,
-    LocalDate dateSortie,String qualiteVideo,int duree)
+    public Film(int id,String titre,TypeFilm type,LocalDate dateSortie,
+    String qualiteVideo,int duree) 
     {
         this.id = id;
         this.titre = titre;
@@ -21,8 +22,35 @@ public class Film {
         this.duree = duree;
     }
 
-    public TypeFilm getType()
-    {
+    public TypeFilm getType() {
         return type;
+    }
+
+    public String getTitre()
+    {
+        return titre;
+    }
+
+    public void ajouterFavori(Film film)
+    {
+        favoris.add(film);
+    }
+
+    private int nombreVues = 0;
+
+    public void incrementerVues()
+    {
+        nombreVues++;
+    }
+
+    public int getNombreVues()
+    {
+        return nombreVues;
+    }
+
+    public void regarderFilm(Film film)
+    {
+        film.incrementerVues();
+        System.out.println(nom + " regarde " + film.getTitre());
     }
 }
